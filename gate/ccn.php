@@ -29,7 +29,7 @@ function multiexplode($seperator, $string){
 //$sk = $_GET['sec'];
 $sk = $_GET['sec'];
 if(empty($sk)) {
-	$sk = 'sk_live_kcEDyclUvLnAHjdxUztNPTe700OgQaYKBe';
+	$sk = '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';
 	
 
 $lista = $_GET['lista'];
