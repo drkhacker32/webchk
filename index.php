@@ -177,7 +177,7 @@
 		<div class="col-md-8">
 			<div class="card" style="background-color:transparent;">
 				<div class="card-body text-center" style="">
-					<h4 class="mb-2"><strong> BAD BOY </strong></h4>
+					<h4 class="mb-2"><strong> T-rex </strong></h4>
                     <a  
 					style="width:140px;"
 					></a>
@@ -186,8 +186,8 @@
 					<textarea rows="1" class="form-control text-center" style="width: 70%; float: left ;"  id="sec" placeholder="sk empty for non sk"></textarea>
 					<textarea rows="1"class="form-control text-center" style="width: 30%; float: right margin-bottom: 5px;" id="cst" placeholder="Custom Amount"></textarea></br>
 					<select name="gate" id="gate" class="form-control" style="margin-top: 0px;">
-					<option style="background:rgba(165, 154, 154, 0.281);color:rgb(255, 208, 0);color:white" value="gate/cvv.php">𝗖𝗩𝗩 𝗖𝗛𝗔𝗥𝗚𝗘𝗗 $𝟭</option>
-					<option style="background:rgba(165, 154, 154, 0.281);color:rgb(255, 208, 0);color:white" value="gate/ccn.php">CCN 𝗖𝗛𝗔𝗥𝗚𝗘𝗗 €𝟭</option>
+					<option style="background:rgba(165, 154, 154, 0.281);color:rgb(255, 208, 0);color:white" value="gate/cvv.php">𝓒𝓥𝓥 𝓒𝓗𝓐𝓡𝓖𝓔𝓓 $𝟭</option>
+					<option style="background:rgba(165, 154, 154, 0.281);color:rgb(255, 208, 0);color:white" value="gate/ccn.php">𝓒𝓒𝓝 𝓒𝓗𝓐𝓡𝓖𝓔𝓓 $𝟭</option>
 						
                 </select>
 					<button class="btn btn-play  btn-bg-gradient text-white" style="width: 45%; float: left; "><i class="fa fa-play" style="margin-right: 3px;"></i>START</button>
@@ -209,7 +209,7 @@
 
 <h5>TOTAL :<span class="badge badge-primary float-right carregadas">0</span></h5><hr class="hr-statusbar">
 
-<h5>LIMIT :<span class="badge badge-secondary float-right">2000</span></h5>
+<h5>LIMIT :<span class="badge badge-secondary float-right">5000</span></h5>
 
                                     <label class="form-control-label" style="margin-left: 10px; margin-bottom: 20px" for="inputcvv"></label>
                   </div> 
@@ -258,7 +258,7 @@
       </div>
     </div>
  <div class="footer-C">
-	<span>CRAFTED BY </span><a href="https://t.me/ccChecker_scripts" target="b_lank" style="
+	<span>CRAFTED BY </span><a href="https://t.me/optrexchk" target="b_lank" style="
     background: -webkit-linear-gradient(#1591ff, #00f2fe);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -357,7 +357,7 @@ if(!lista){
 	return false;
 }
 
-Swal.fire({title: 'Please wait for the card to be processed !!', icon: 'success', showConfirmButton: false, toast: true, position: 'top-end', timer: 3000});
+Swal.fire({title: 'Please wait for the card to be processed !!', icon: 'success', showConfirmButton: false, toast: true, position: 'top-end', timer: 4000});
 
 var line = array.filter(function(value){
 if(value.trim() !== ""){
@@ -382,8 +382,8 @@ txt += value + '\n';
 */
 
 $('.form-checker').val(txt.trim());
-if(total > 2000){
-  Swal.fire({title: 'Please do not check more than 2000 CCs :)', icon: 'warning', showConfirmButton: false, toast: true, position: 'top-end', timer: 3000});
+if(total > 5000){
+  Swal.fire({title: 'Please do not check more than 5000 CCs :)', icon: 'warning', showConfirmButton: false, toast: true, position: 'top-end', timer: 4000});
   return false;
 }
 
@@ -396,13 +396,13 @@ var callBack = $.ajax({
 	url: gate + '?lista=' + data + '&sec=' + sec,
 	success: function(retorno){
 		if(retorno.indexOf("#CHARGED") >= 0){
-			Swal.fire({title: '+1 CHARGED CC', icon: 'success', showConfirmButton: false, toast: true, position: 'top-end', timer: 3000});
+			Swal.fire({title: '+1 CHARGED CC', icon: 'success', showConfirmButton: false, toast: true, position: 'top-end', timer: 4000});
 			$('#lista_charge').append(retorno);
 			removelinha();
 			charge = charge +1;
 			}
 			else if(retorno.indexOf("#LIVE") >= 0){
-			Swal.fire({title: '+1 LIVE CC', icon: 'success', showConfirmButton: false, toast: true, position: 'top-end', timer: 3000});
+			Swal.fire({title: '+1 LIVE CC', icon: 'success', showConfirmButton: false, toast: true, position: 'top-end', timer: 4000});
 			$('#lista_aprovadas').append(retorno);
 			removelinha();
 			lives = lives +1;
@@ -418,14 +418,14 @@ var callBack = $.ajax({
 		$('.testadas').text(testadas);
 		
 		if(testadas == total){
-			Swal.fire({title: 'HAVE BEEN DISPOSED', icon: 'success', showConfirmButton: false, toast: true, position: 'top-end', timer: 3000});
+			Swal.fire({title: 'HAVE BEEN DISPOSED', icon: 'success', showConfirmButton: false, toast: true, position: 'top-end', timer: 4000});
 			$('.btn-play').attr('disabled', false);
 			$('.btn-stop').attr('disabled', true);
 		}
         }
       });
       $('.btn-stop').click(function(){
-      Swal.fire({title: 'Succeeding Pause !!', icon: 'warning', showConfirmButton: false, toast: true, position: 'top-end', timer: 3000});
+      Swal.fire({title: 'Succeeding Pause !!', icon: 'warning', showConfirmButton: false, toast: true, position: 'top-end', timer: 4000});
       $('.btn-play').attr('disabled', false);
       $('.btn-stop').attr('disabled', true);      
       	callBack.abort();
